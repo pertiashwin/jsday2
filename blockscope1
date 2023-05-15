@@ -1,0 +1,45 @@
+// Scope of a Variable
+// 1. Global Scope
+// 2. Local Scope
+
+let sum = 0
+
+// ES6: 
+// Global variable - var
+// Local variable - let Block Scope
+// constant variable  - const 
+
+// constant can't update the value
+function h() {
+    const x = [1,2,35]
+    x.forEach(element => {
+        sum += element;        
+    });
+    return sum;
+}
+
+console.log(h())
+
+let person = {
+    firstName: "Amit",
+    lastName: "Sharma",
+};
+// Destructure an Object
+let {firstName, lastName} = person
+console.log(`hello ${firstName} ${lastName} `)
+
+
+var books = [
+    { title: 'Java', author : 'KKRose' },
+    { title: 'Python', width: 'Rostum' },
+    { title: 'ObjectiveC', width: 'Apple' },
+  ];
+  
+  let book = books.map((i) => {
+      return i.title;
+  });
+
+  for(var i=0;i<book.length;i++){
+    console.log(book[i])    
+  }
+console.log(book)
